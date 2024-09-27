@@ -1,0 +1,22 @@
+#sale {
+    color: #E30000;
+    text-align: center;
+    text-shadow: 0px 4px 5px #FFD712;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+#hero {
+    width: 1440px;
+}
+
+.main-content {
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
