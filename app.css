@@ -2,18 +2,33 @@ body {
     margin: 0;
 }
 
+nav ul {
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
 .nav-content {
     display: flex;
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    position: sticky;
+    background-color: #D0D0D0;
+    border: 1px solid #000;
 }
 
 .button {
-    display:inline-block;
+    justify-content: space-around;
+    display: block;
     text-decoration: none;
     text-align: center;
-    list-style: none;
+    color: black;
+    background-color: white;
+    padding: 1em;
+    border: 1px solid #000;
 }
 
 .main-content {
@@ -30,6 +45,8 @@ body {
     justify-content: space-evenly;
     background-color: #C8C2C2;
     flex-shrink: 0;
+    padding-top: 15px;
+    padding-bottom: 20px;
     border: 1px solid #000;
 }
 
@@ -45,4 +62,8 @@ body {
 
 #email {
     align-content: center;
+}
+
+#hero {
+    width:100%;
 }
