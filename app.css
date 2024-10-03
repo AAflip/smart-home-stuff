@@ -2,10 +2,20 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-family: Inter;
+    /* font-size: 40px; */
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
 nav ul {
+    display: flex;
     list-style: none;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: space-around;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -23,12 +33,19 @@ nav ul {
 .button {
     justify-content: space-around;
     display: block;
+    flex-flow: row-reverse wrap;
     text-decoration: none;
     text-align: center;
     color: black;
     background-color: white;
-    padding: 1em;
+    height: 100%;
     border: 1px solid #000;
+    transition: color ease 200ms, background ease 200ms ;
+}
+
+.button:hover {
+    color: white;
+    background-color: rgb(168, 167, 187);
 }
 
 .main-content {
@@ -58,6 +75,15 @@ nav ul {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+}
+
+#details{
+    display: inline-block;
+    justify-content: center;
+    margin: 0;
+    padding: 3em;
+    background-color: #E2E2E2;
+    border: 5px solid #000;
 }
 
 #email {
