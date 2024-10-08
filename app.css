@@ -1,13 +1,22 @@
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #8e8e8e;
+}
+
+header{
+    position: sticky;
+    /* I do not understand why this no work, I come back later */
 }
 
 h1 {
     font-family: Inter;
-    /* font-size: 40px; */
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    margin: 0;
 }
 
 nav ul {
@@ -18,6 +27,11 @@ nav ul {
     align-items: center;
     margin: 0;
     padding: 0;
+}
+
+footer input{
+    padding: 1rem;
+    margin: 0;
 }
 
 .nav-content {
@@ -42,7 +56,7 @@ nav ul {
     border: 1px solid #000;
     transition: color ease 200ms, background ease 200ms ;
     height: 4rem;
-    width: 12rem;
+    width: 10rem;
 }
 
 .button:hover {
@@ -59,30 +73,56 @@ nav ul {
     width: 274px;
     padding-bottom: 50px;
     border: 2px solid black;
-    border-radius: 30px;
+    border-radius: 32px;
     margin: 40px 0;
 }
 
-.cards-work {
+.link-cards > img {
+    height: 169px;
+    width: 274px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.hero-content {
+    max-width: 1280px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    flex-flow: row wrap;
-    align-items: center;
+    position: relative;
+}
+
+.cards-work {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .cards-links {
     text-decoration: none;
-    text-align: end;
+    align-content:space-between;
+    text-align: flex-end;
     margin: 0;
-    padding: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    border: 2px solid black;
+    padding: 1rem 2em;
 }
 
 .main-content {
     display: flex;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
     max-width: 1440px;
     margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 0px 5px #000;
 }
 
 .footer-content {
@@ -104,16 +144,23 @@ nav ul {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    margin-top: 160px;
     margin-bottom: 40px;
 }
 
 #details {
-    display: inline-block;
+    display: flex;
     justify-content: center;
+    align-content: center;
     margin: 0;
-    padding: 3em;
+    padding: 2em 3em;
     background-color: #E2E2E2;
     border: 5px solid #000;
+    position: absolute;
+    bottom: 135px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
 }
 
 #title {
@@ -121,9 +168,11 @@ nav ul {
 }
 
 #email {
-    align-content: center;
+    align-content: space-between;
 }
 
-#hero {
+#hero-image {
     width:100%;
+    position: relative;
+    z-index: 5;
 }
