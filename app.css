@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.bor-bot img{
+    border-bottom: 2px solid black;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -8,7 +23,8 @@ body {
 
 header{
     position: sticky;
-    /* I do not understand why this no work, I come back later */
+    top: 0;
+    z-index: 10;
 }
 
 h1 {
@@ -21,7 +37,6 @@ h1 {
 
 .page-content h2 {
     text-align: center;
-    text-decoration: underline solid black 5px;
 }
 
 nav ul {
@@ -51,7 +66,7 @@ footer input{
 
 .page-content {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-evenly;
 }
 
@@ -80,16 +95,15 @@ footer input{
 }
 
 .link-cards {
-    display: block;
+    display:flex;
     justify-content: space-evenly;
     align-content: center;
-    flex-flow: row wrap;
-    height: 169px;
+    flex-flow: column nowrap;
     width: 274px;
-    padding-bottom: 50px;
     border: 2px solid black;
     border-radius: 32px;
     margin: 40px 0;
+    padding-bottom: 1rem;
 }
 
 .link-cards > img {
@@ -97,6 +111,10 @@ footer input{
     width: 274px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+}
+
+.link-cards h3, p {
+    margin-top: 0.25rem;
 }
 
 .ent-cards {
@@ -111,6 +129,38 @@ footer input{
     flex-wrap: wrap;
     justify-content: space-evenly;
     position: relative;
+}
+
+.big-image {
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: left;
+    width: 83%;
+    margin: 1rem auto;
+}
+
+.big-image img {
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    max-height: 584px;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+}
+
+.big-image h3 {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.big-image p {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
 }
 
 .cards-work {
@@ -129,8 +179,47 @@ footer input{
     font-size: 20px;
     font-weight: 700;
     border: 2px solid black;
-    padding: 1rem 2em;
+    padding: 1rem;
 }
+
+.side-card {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    border: 1px solid black;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: auto;
+    margin: 2em auto;
+}
+
+.side-card img {
+    max-width: 521px;
+    max-height: 439px;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.side-text {
+    color: #000;
+    font-family: Inter;
+    font-style: normal;
+    line-height: normal;
+    margin: 20px;
+    text-align: left;
+}
+
+/* .side-text h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: underline solid black;
+}
+
+.side-text p {
+    font-size: 20px;
+    font-weight: 400;
+} */
 
 .main-content {
     display: flex;
@@ -141,7 +230,14 @@ footer input{
     width: 100%;
     margin: 0 auto;
     background-color: white;
-    box-shadow: 0px 0px 5px #000;
+    box-shadow: 0px 0px 8px #000;
+}
+
+.page-header {
+    background-color: #F2F2F2;
+    border: 1px solid black;
+    padding-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 .footer-content {
@@ -179,11 +275,11 @@ footer input{
     bottom: 135px;
     left: 50%;
     transform: translateX(-50%);
-    width: 700px;
+    width: 800px;
 }
 
 #title {
-    width: 17rem;
+    width: 19rem;
 }
 
 #email {
@@ -194,4 +290,12 @@ footer input{
     width:100%;
     position: relative;
     z-index: 5;
+}
+
+#blur {
+    filter: blur(2px);
+}
+
+#side-card-right {
+    flex-direction: row-reverse;
 }
