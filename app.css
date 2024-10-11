@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: Inter;
 }
 
 img {
@@ -33,6 +34,10 @@ h1 {
     font-weight: 800;
     line-height: normal;
     margin: 0;
+}
+
+h3 {
+    text-decoration: underline solid black;
 }
 
 .page-content h2 {
@@ -178,19 +183,60 @@ footer input{
     font-family: Inter;
     font-size: 20px;
     font-weight: 700;
-    border: 2px solid black;
     padding: 1rem;
+    background: transparent;
+}
+
+.cards-work > .link-cards{
+    padding-bottom: 0;
+}
+
+.split-cards {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.split-cards img {
+    max-height: 400px;
+    max-width: 264px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 30px 0px 30px 30px;
+}
+
+.split-text-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.split-text {
+    border: 1px solid black;
+    border-radius: 0px 15px 15px 0px;
+    max-width: 438px;
+    height: 100%;
+    max-height: 100px;
+    text-align: left;
+    padding: 1em;
+}
+
+.split-text-righty{
+    align-self: flex-end;
+    border-radius: 15px 0px 0px 15px;
 }
 
 .side-card {
     display: flex;
-    justify-content: center;
     flex-flow: row nowrap;
     border: 1px solid black;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-    width: auto;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     margin: 2em auto;
+    padding: 0;
+    width: 70%;
 }
 
 .side-card img {
@@ -206,20 +252,24 @@ footer input{
     font-family: Inter;
     font-style: normal;
     line-height: normal;
-    margin: 20px;
+    margin: 2em;
+    margin-left: 3em;
     text-align: left;
+    max-width: 20em;
 }
 
-/* .side-text h3 {
+ .side-text h3 {
     font-size: 30px;
     font-weight: 600;
     text-decoration: underline solid black;
+    margin-top: 10px;
 }
 
 .side-text p {
     font-size: 20px;
     font-weight: 400;
-} */
+    margin-top: 20px;
+} 
 
 .main-content {
     display: flex;
@@ -268,14 +318,15 @@ footer input{
     justify-content: center;
     align-content: center;
     margin: 0;
-    padding: 2em 3em;
+    padding: 2em 3em 1.5em;
     background-color: #E2E2E2;
     border: 5px solid #000;
     position: absolute;
     bottom: 135px;
     left: 50%;
     transform: translateX(-50%);
-    width: 800px;
+    width: 850px;
+    text-decoration: none;
 }
 
 #title {
@@ -298,4 +349,24 @@ footer input{
 
 #side-card-right {
     flex-direction: row-reverse;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 30px;
+}
+
+#side-card-right .side-text{
+    margin-right: 7em;
+}
+
+#stretch {
+    height: 400px;
+    border-radius: 30px 30px 30px 0px;
+}
+
+#yin-yang-kinda {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 4rem 0;
 }
