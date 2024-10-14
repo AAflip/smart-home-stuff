@@ -188,7 +188,15 @@ footer input{
     font-size: 20px;
     font-weight: 700;
     padding: 1rem;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     background: transparent;
+    transition: color ease 200ms, background ease 200ms ;
+}
+
+.cards-links:hover {
+    color: white;
+    background-color: rgb(168, 167, 187);
 }
 
 .cards-work > .link-cards{
