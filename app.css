@@ -405,3 +405,8 @@ footer input{
     justify-content: center;
     margin: 4rem 0;
 }
+
+.footer-content > #badge {
+    justify-content: flex-end;
+    align-content: flex-end;
+}
